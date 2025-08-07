@@ -1,0 +1,10 @@
+The following text are working for test case to chain with rule, 
+  use copy each and past in GUI(Frontend) input.
+ 
+    - soil is dry
+    - something is moving
+    - Ethiopia is country
+    - birds are singing
+
+    - Today is Thursday
+    - Now four oclock
