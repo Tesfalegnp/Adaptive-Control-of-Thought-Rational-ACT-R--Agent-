@@ -20,15 +20,12 @@
 !(add-atom &kb (: FACT9 (soil is dry)))
 !(add-atom &kb (: FACT10 (you have water)))
 
-;; ===== Facts (10) =====
-; !(add-atom &kb (: FACT2 (plants need light)))
-; !(add-atom &kb (: FACT4 (plants need water)))
-; !(add-atom &kb (: FACT5 (toolshed is open)))
-; !(add-atom &kb (: FACT6 (watering can is inside)))
-; !(add-atom &kb (: FACT8 (birds are singing)))
-; !(add-atom &kb (: FACT9 (morning has started)))
-; !(add-atom &kb (: FACT10 (plants are growing)))
+!(add-atom &kb (: FACT11 (birds are singing)))
+!(add-atom &kb (: FACT12 (birds_sound is morning_alarm)))
 
+!(add-atom &kb (: FACT13 (Today is Thursday)))
+!(add-atom &kb (: FACT14 (Thursday has Task_presentation)))
+;; ===== Facts (end) =====
 
 
             ;; Procedurally knowledge base to use rules
@@ -64,4 +61,13 @@
                      (-> ( man can move)
                              (i see man)))))
                          
-
+!(add-atom (space) (: R8 
+                        ( ->(birds are singing)
+                        (-> (birds_sound is morning_alarm)
+                            (i should wake_up)  ))))
+!(add-atom (space) (: R9 ( -> (Today is Thursday)     
+                              (-> (Thursday has Task_presentation) 
+                                   (i Come to Mexico Office)))))
+!(add-atom (space) (: R10 ( -> (Now four oclock)
+                                (-> (i come to Mexico Office)
+                                    (I should Start Presentation)))))
